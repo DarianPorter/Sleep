@@ -1,0 +1,11 @@
+.sidenav {
+    border: 1.5vw #141414 solid;
+    width: 25vw;
+    box-sizing: border-box;
+}
+.sidenav-content {
+    border-radius: 10px;
+    background: #1e1e1e;
+    width: 100%;
+    height: 100%;
+}

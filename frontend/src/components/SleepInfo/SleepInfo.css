@@ -1,0 +1,13 @@
+.sleepinfo { 
+    border-radius: 5px;
+    border: 1.5vw #141414 solid;
+    height: 40vh;   
+    width: 100%;
+    box-sizing: border-box;
+}
+.sleepinfo-content{
+    border-radius: 10px;
+    background: #1e1e1e;
+    width: 100%;
+    height: 100%;
+}
