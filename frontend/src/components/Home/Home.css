@@ -6,3 +6,17 @@
 .home-right-content{
     width: 100%
 }
+.loading{
+    animation : shimmer 3s infinite;
+    background: linear-gradient(to right, #1e1e1e 4%, rgb(41, 41, 41) 25%, #1e1e1e 36%);
+    background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+}
