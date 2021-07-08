@@ -15,7 +15,6 @@ class SleepGraph extends Component {
         const { sleepInterval } = this.props
         if(!sleepInterval) return []
         let count = moment(sleepInterval.ts).unix()
-        console.log(sleepInterval, "💽💽💽")
         return [
             {
                 data: sleepInterval.stages.map((intData)=>{
@@ -83,17 +82,17 @@ class SleepGraph extends Component {
                 }
             },
             grid: {
+                borderColor: 'grey',
                 row: {
-                    colors: ['rgba(255,255,255, 0.05)', 'rgba(255,255,255, 0.1)'],
-                    opacity: 1
-                }
-            }
+                    colors: ['#f3f3f3', 'transparent'],
+                    opacity: 0.05
+                },
+            },
         }
     }
 
     render = () => {
         const { loading, sleepInterval } = this.props
-        console.log(this.formatSeries())
         return (
             <div className="sleepgraph">
                  <div className={`sleepgraph-content ${loading}`}>

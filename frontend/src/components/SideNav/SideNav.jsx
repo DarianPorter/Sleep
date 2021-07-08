@@ -28,7 +28,7 @@ class SideNav extends Component {
                             const { id, ts } = datum   
                             const selected = selectedID === id ? "selected" : ""
                             const className = `sidenav-content-ul-li-date ${selected}`
-                            return <div onClick={()=>(setSelectedID(id))} key={index2} className={className}>{moment(ts).format('LLL')}</div>
+                            return <div onClick={()=>(setSelectedID(id))} key={index2} className={className}>{moment(new Date(ts).getTime()).format('LLL')}</div>
                          })}
                     </li>
                 ))}
