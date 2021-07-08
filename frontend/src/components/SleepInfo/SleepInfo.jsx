@@ -8,7 +8,7 @@ const TYPES = [
     "tempBedC",
     "respiratoryRate",
     "heartRate",
-    "heating",
+    "tnt"
 ]
 
 const PARSE_TYPE = {
@@ -16,6 +16,7 @@ const PARSE_TYPE = {
     tempBedC: 'Bed Tempature °C',
     respiratoryRate: 'Respiratory Rate',
     heartRate: 'Heart Rate',
+    tnt: "Toss & Turn"
 }
 
 class SleepInfo extends Component {
@@ -29,7 +30,6 @@ class SleepInfo extends Component {
     getSeries = () => {
         const { index } = this.state;
         const type = TYPES[index]
-        if(type === 'tnt') return [{}];
         const { sleepInterval } = this.props
         const data = sleepInterval.timeseries[type]
         return [
@@ -47,7 +47,7 @@ class SleepInfo extends Component {
 
     increment = () => {
         const { index } = this.state;
-        const value = index+1 === TYPES.length-1 ? 0 : index + 1
+        const value = index+1 === TYPES.length ? 0 : index + 1
         this.setState({index: value })
     }
 
